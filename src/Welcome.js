@@ -77,6 +77,11 @@ class Welcome {
     return this;
   }
 
+  setNumber(value) {
+    this.number = value;
+    return this;
+  }
+
   setBackground(value) {
     this.backgroundIMG = value;
     return this;
