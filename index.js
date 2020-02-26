@@ -1,0 +1,1 @@
+module.exports.Welcome = require('./src/Welcome');
