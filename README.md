@@ -18,6 +18,12 @@ You want to develop a discord bot using the Discord.js bookstore and you want to
 * Fully customisable !
 * Updated regularly !
 
+For download this package use:
+
+```bash
+$ npm install discord-canvas
+```
+
 If you have a request for a new feature you can publish an issue on Github.  
   
 Made by xixi52 with ❤️
