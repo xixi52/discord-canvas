@@ -51,12 +51,6 @@ class Goodbye {
     this.colorBorder = "#000000";
   }
 
-  setColor(variable, value) {
-    const formattedVariable = f.getColorVariable(variable);
-    if (this[formattedVariable]) this[formattedVariable] = value;
-    return this;
-  }
-
   setAvatar(value) {
     this.avatar = value;
     return this;
@@ -87,14 +81,20 @@ class Goodbye {
     return this;
   }
 
+  setColor(variable, value) {
+    const formattedVariable = f.formatVariable("color", variable);
+    if (this[formattedVariable]) this[formattedVariable] = value;
+    return this;
+  }
+  
   setText(variable, value) {
-    const formattedVariable = f.getTextVariable(variable);
+    const formattedVariable = f.formatVariable("text", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
   }
 
   setOpacity(variable, value) {
-    const formattedVariable = getOpacityVariable(variable);
+    const formattedVariable = f.formatVariable("opacity", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
   }

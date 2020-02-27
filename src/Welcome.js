@@ -52,7 +52,7 @@ class Welcome {
   }
 
   setColor(variable, value) {
-    const formattedVariable = f.getColorVariable(variable);
+    const formattedVariable = f.formatVariable("color", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
   }
@@ -88,13 +88,13 @@ class Welcome {
   }
 
   setText(variable, value) {
-    const formattedVariable = f.getTextVariable(variable);
+    const formattedVariable = f.formatVariable("text", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
   }
 
   setOpacity(variable, value) {
-    const formattedVariable = getOpacityVariable(variable);
+    const formattedVariable = formatVariable("opacity", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
   }
