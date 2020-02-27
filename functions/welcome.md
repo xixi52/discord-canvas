@@ -31,7 +31,6 @@ let image = await welcomeCanvas
 let attachment = new Discord.Attachment(image.toBuffer(), "welcome-image.png");
 
 message.channel.send(attachment);
-
 ```
 
 {% hint style="success" %}
@@ -57,6 +56,56 @@ Here is the complete list of available functions
 Displays the Discord username
 
 ```javascript
-.setUsername(variable1)
+.setUsername(variable)
+```
+
+### `.setDiscriminator`
+
+Displays the Discord user discriminator
+
+```javascript
+.setDiscriminator(variable)
+```
+
+### `.setAvatar`
+
+Displays the Discord user avatar, you need use an URL
+
+```javascript
+.setDiscriminator(URL)
+```
+
+### `.setNumber`
+
+Discplays the number of users in guild
+
+```javascript
+.setDiscriminator(variable)
+```
+
+### `.setBackground` _\(optional\)_
+
+Displays a background, you need use an URL
+
+```javascript
+.setBackground(URL)
+```
+
+### `.setText` _\(optional\)_
+
+You can translate or modify the text
+
+```javascript
+.setText("title", "welcome")
+.setText("message", "welcome in {server}")
+.setText("number", "- {number}th")
+```
+
+### `.setColor` _\(optional\)_
+
+You can modify the color of any part of the card
+
+```javascript
+
 ```
 
