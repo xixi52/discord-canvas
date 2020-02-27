@@ -2,7 +2,7 @@ module.exports = {
 
     /**
      * Gets variables color
-     * @param {object} variable The variable simplified
+     * @param {object} variables The variable simplified
      * @returns The variable formatted
      */
     getColorVariable(variables) {
@@ -17,21 +17,21 @@ module.exports = {
         } else if(variable === "username") {
             formattedVariable = "colorUsername";
         } else if(variable === "username-box") {
-            formattedVariable = "colorBoxUsername";
+            formattedVariable = "colorUsernameBox";
         } else if(variable === "ashtag") {
             formattedVariable = "colorAshtag";
         } else if(variable === "discriminator") {
             formattedVariable = "colorDiscriminator";
         } else if(variable === "discriminator-box") {
-            formattedVariable = "colorBoxDiscriminator";
+            formattedVariable = "colorDiscriminatorBox";
         } else if(variable === "message") {
             formattedVariable = "colorMessage";
         } else if(variable === "message-box") {
-            formattedVariable = "colorBoxMessage";
+            formattedVariable = "colorMessageBox";
         } else if(variable === "number") {
             formattedVariable = "colorNumber";
         } else if(variable === "background") {
-            formattedVariable = "backgroundColor";
+            formattedVariable = "colorBackground";
         } else if(variable === "border") {
             formattedVariable = "colorBorder";
         } else {
@@ -42,18 +42,18 @@ module.exports = {
 
     /**
      * Gets variables opacity
-     * @param {object} variable The variable simplified
+     * @param {object} variables The variable simplified
      * @returns The variable formatted
      */
     getOpacityVariable(variables) {
         let formattedVariable = null,
         variable = variables.toLowerCase()
         if(variable === "username-box") {
-            formattedVariable = "opacityBoxUsername";
+            formattedVariable = "opacityUsernameBox";
         } else if(variable === "discriminator-box") {
-            formattedVariable = "opacityBoxDiscriminator";
+            formattedVariable = "opacityDiscriminatorBox";
         } else if(variable === "message-box") {
-            formattedVariable = "opacityBoxMessage";
+            formattedVariable = "opacityMessageBox";
         } else if(variable === "border") {
             formattedVariable = "opacityBorder";
         } else {
@@ -64,18 +64,18 @@ module.exports = {
 
     /**
      * Gets variables text
-     * @param {object} variable The variable simplified
+     * @param {object} variables The variable simplified
      * @returns The variable formatted
      */
     getTextVariable(variables) {
         let formattedVariable = null,
         variable = variables.toLowerCase()
         if(variable === "title") {
-            formattedVariable = "title";
+            formattedVariable = "textTitle";
         } else if(variable === "message") {
-            formattedVariable = "message";
+            formattedVariable = "textMessage";
         } else if(variable === "number") {
-            formattedVariable = "numberMessage";
+            formattedVariable = "textNumber";
         } else {
             return null;
         }

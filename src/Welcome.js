@@ -22,7 +22,7 @@ const applyText = (canvas, text, defaultFontSize) => {
 
 class Welcome {
   constructor() {
-    this.title = "welcome";
+    this.textTitle = "welcome";
     this.colorTitle = "#03A9F4";
     this.colorTitleBorder = "#000000";
     this.avatar =
@@ -30,22 +30,22 @@ class Welcome {
     this.colorAvatar = "#03A9F4";
     this.username = "username";
     this.colorUsername = "#ffffff";
-    this.colorBoxUsername = "#000000";
-    this.opacityBoxUsername = "0.4";
+    this.colorUsernameBox = "#000000";
+    this.opacityUsernameBox = "0.4";
     this.colorAshtag = "#ffffff";
     this.discriminator = "XXXX";
     this.colorDiscriminator = "#ffffff";
-    this.opacityBoxDiscriminator = "0.4";
-    this.colorBoxDiscriminator = "#000000";
-    this.message = "Welcome in {server}";
+    this.opacityDiscriminatorBox = "0.4";
+    this.colorDiscriminatorBox = "#000000";
+    this.textMessage = "Welcome in {server}";
     this.server = "server";
     this.colorMessage = "#ffffff";
-    this.opacityBoxMessage = "0.4";
-    this.colorBoxMessage = "#000000";
+    this.opacityMessageBox = "0.4";
+    this.colorMessageBox = "#000000";
     this.colorNumber = "#ffffff";
     this.number = "0";
-    this.numberMessage = "- {number}th member !";
-    this.backgroundColor = "#303136";
+    this.textNumber = "- {number}th member !";
+    this.colorBackground = "#303136";
     this.backgroundIMG = `${__dirname}/../assets/img/1px.png`;
     this.opacityBorder = "0.4";
     this.colorBorder = "#000000";
@@ -103,12 +103,12 @@ class Welcome {
 
     let canvas = Canvas.createCanvas(1024, 450),
       ctx = canvas.getContext("2d"),
-      text = this.message.replace(/{server}/g, this.server),
-      number = this.numberMessage.replace(/{number}/g, this.number),
-      title = this.title.toUpperCase();
+      text = this.textMessage.replace(/{server}/g, this.server),
+      number = this.textNumber.replace(/{number}/g, this.number),
+      title = this.textTitle.toUpperCase();
 
     // Background
-    ctx.fillStyle = this.backgroundColor;
+    ctx.fillStyle = this.colorBackground;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     let background = await Canvas.loadImage(this.backgroundIMG);
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
@@ -120,14 +120,14 @@ class Welcome {
     ctx.fillRect(canvas.width - 25, 0, 25, canvas.height);
     ctx.fillRect(25, 0, canvas.width - 50, 25);
     ctx.fillRect(25, canvas.height - 25, canvas.width - 50, 25);
-    ctx.fillStyle = this.colorBoxUsername;
-    ctx.globalAlpha = this.opacityBoxUsername;
+    ctx.fillStyle = this.colorUsernameBox;
+    ctx.globalAlpha = this.opacityUsernameBox;
     ctx.fillRect(344, canvas.height - 296, 625, 65);
-    ctx.fillStyle = this.colorBoxDiscriminator;
-    ctx.globalAlpha = this.opacityBoxDiscriminator;
+    ctx.fillStyle = this.colorDiscriminatorBox;
+    ctx.globalAlpha = this.opacityDiscriminatorBox;
     ctx.fillRect(389, canvas.height - 225, 138, 65);
-    ctx.fillStyle = this.colorBoxMessage;
-    ctx.globalAlpha = this.opacityBoxMessage;
+    ctx.fillStyle = this.colorMessageBox;
+    ctx.globalAlpha = this.opacityMessageBox;
     ctx.fillRect(308, canvas.height - 110, 672, 65);
 
     // Draw username
