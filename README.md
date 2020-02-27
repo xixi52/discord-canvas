@@ -6,7 +6,7 @@ description: discord-canvas is a package to simplifie the usage of canvas for Di
 
 ## Easy to use !!
 
-You want to develop a discord bot using the Discord.js bookstore and you want to integrate nice image in Canvas? discord-canvas is made for you! You can create great welcome images, goodbye images and other fun images using our many easy-to-use features!  
+You want to develop a discord bot using the Discord.js library and you want to integrate nice image in Canvas? discord-canvas is made for you! You can create great welcome images, goodbye images and other fun images using our many easy-to-use features!
 
 ## Example
 
@@ -24,9 +24,9 @@ For download this package use:
 $ npm install discord-canvas
 ```
 
-If you have a request for a new feature you can publish an issue on Github.  
-  
+If you have a request for a new feature you can publish an issue on Github.
+
 [Documentation](https://www.discord-canvas.net)
-  
+
 Made by xixi52 with ❤️
 

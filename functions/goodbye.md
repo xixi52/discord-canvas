@@ -28,7 +28,7 @@ let image = await goodbyeCanvas
   .setColor("avatar", "#8015EA")
   .setBackground("https://cdn.craftburg.net/stockage/img/discord/background.jpg")
   .toAttachment();
-  
+
 let attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
 
 message.channel.send(attachment);
@@ -130,7 +130,7 @@ You can modify the color of any part of the card
 
 You can modify the opacity of blocks, you must enter a number between 0 and 1.
 
-You can delete a block with opacity 0 
+You can delete a block with opacity 0
 
 ```javascript
 .setOpacity("username-box", 0.4)

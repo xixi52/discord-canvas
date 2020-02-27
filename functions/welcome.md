@@ -35,7 +35,7 @@ message.channel.send(attachment);
 ```
 
 {% hint style="success" %}
- You can of course enter your variables.
+You can of course enter your variables.
 
 ```javascript
 .setUsername("xixi52")
@@ -130,7 +130,7 @@ You can modify the color of any part of the card
 
 You can modify the opacity of blocks, you must enter a number between 0 and 1.
 
-You can delete a block with opacity 0 
+You can delete a block with opacity 0
 
 ```javascript
 .setOpacity("username-box", 0.4)
@@ -138,10 +138,4 @@ You can delete a block with opacity 0
 .setOpacity("message-box", 0.4)
 .setOpacity("border", 1)
 ```
-
-
-
-
-
-
 
