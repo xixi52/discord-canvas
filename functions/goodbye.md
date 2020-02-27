@@ -2,19 +2,19 @@
 description: Make a unique image that matches you!
 ---
 
-# Welcome
+# Goodbye
 
 ## Example
 
 Here is an example of customisation possibilities:
 
-![It&apos;s an example](../.gitbook/assets/welcome-image-2.png)
+![It&apos;s an example](../.gitbook/assets/welcome-image-3.png)
 
 ```javascript
 const canvas = require("discord-canvas"),
-  welcomeCanvas = new canvas.Welcome();
+  goodbyeCanvas = new canvas.Goodbye();
 
-let image = await welcomeCanvas
+let image = await goodbyeCanvas
   .setUsername("xixi52")
   .setDiscriminator("0001")
   .setNumber("140")
@@ -28,14 +28,14 @@ let image = await welcomeCanvas
   .setColor("avatar", "#8015EA")
   .setBackground("https://cdn.craftburg.net/stockage/img/discord/background.jpg")
   .toAttachment();
-
-let attachment = new Discord.Attachment(image.toBuffer(), "welcome-image.png");
+  
+let attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
 
 message.channel.send(attachment);
 ```
 
 {% hint style="success" %}
- You can of course enter your variables.
+You can of course enter your variables.
 
 ```javascript
 .setUsername("xixi52")
@@ -101,8 +101,8 @@ You must keep the {server} and {number} variables
 {% endhint %}
 
 ```javascript
-.setText("title", "welcome")
-.setText("message", "welcome in {server}")
+.setText("title", "goodbye")
+.setText("message", "leaving from {server}")
 .setText("number", "- {number}th")
 ```
 
@@ -111,16 +111,16 @@ You must keep the {server} and {number} variables
 You can modify the color of any part of the card
 
 ```javascript
-.setColor("title", "#ffffff") // WELCOME
-.setColor("title-border", "#ffffff") // WELCOME BORDER
+.setColor("title", "#ffffff") // GOODBYE
+.setColor("title-border", "#ffffff") // GOODBYE BORDER
 .setColor("avatar", "#ffffff") // CIRCLE
 .setColor("username", "#ffffff") // USER
 .setColor("username-box", "#ffffff") // USER BACKGROUND
 .setColor("ashtag", "#ffffff") // # COLOR
 .setColor("discriminator", "#ffffff") // USER DISCRIMINATOR
 .setColor("discriminator-box", "#ffffff") // DISCRIMINATOR BACKGROUND
-.setColor("message", "#ffffff") // WELCOME MESSAGE
-.setColor("message-box", "#ffffff") // WELCOME MESSAGE BACKGROUND
+.setColor("message", "#ffffff") // GOODBYE MESSAGE
+.setColor("message-box", "#ffffff") // GOODBYE MESSAGE BACKGROUND
 .setColor("number", "#ffffff") // NUMBER MESSAGE
 .setColor("background", "#ffffff") // BACKGROUND COLOR
 .setColor("border", "#ffffff") // BORDER COLOR
@@ -138,10 +138,4 @@ You can delete a block with opacity 0
 .setOpacity("message-box", 0.4)
 .setOpacity("border", 1)
 ```
-
-
-
-
-
-
 

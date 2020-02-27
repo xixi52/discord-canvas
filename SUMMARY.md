@@ -5,4 +5,5 @@
 ## Functions
 
 * [Welcome](functions/welcome.md)
+* [Goodbye](functions/goodbye.md)
 
