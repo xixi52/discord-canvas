@@ -1,5 +1,5 @@
 ---
-description: Make a unique image that matches you!&
+description: Make a unique image that matches you!
 ---
 
 # Welcome
@@ -106,6 +106,37 @@ You can translate or modify the text
 You can modify the color of any part of the card
 
 ```javascript
-
+.setColor("title", "#ffffff") // WELCOME
+.setColor("title-border", "#ffffff") // WELCOME BORDER
+.setColor("avatar", "#ffffff") // CIRCLE
+.setColor("username", "#ffffff") // USER
+.setColor("username-box", "#ffffff") // USER BACKGROUND
+.setColor("ashtag", "#ffffff") // # COLOR
+.setColor("discriminator", "#ffffff") // USER DISCRIMINATOR
+.setColor("discriminator-box", "#ffffff") // DISCRIMINATOR BACKGROUND
+.setColor("message", "#ffffff") // WELCOME MESSAGE
+.setColor("message-box", "#ffffff") // WELCOME MESSAGE BACKGROUND
+.setColor("number", "#ffffff") // NUMBER MESSAGE
+.setColor("background", "#ffffff") // BACKGROUND COLOR
+.setColor("border", "#ffffff") // BORDER COLOR
 ```
+
+### `.setOpacity` _\(optional\)_
+
+You can modify the opacity of blocks, you must enter a number between 0 and 1.
+
+You can delete a block with opacity 0 
+
+```javascript
+.setOpacity("username-box", 0.4)
+.setOpacity("discriminator-box", 0.4)
+.setOpacity("message-box", 0.4)
+.setOpacity("border", 1)
+```
+
+
+
+
+
+
 
