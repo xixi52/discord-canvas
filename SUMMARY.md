@@ -2,3 +2,7 @@
 
 * [Introduction](README.md)
 
+## Functions
+
+* [Welcome](functions/welcome.md)
+
