@@ -20,5 +20,5 @@
   "homepage": "https://github.com/xixi52/discord-canvas#readme",
   "dependencies": {
     "canvas": "^2.6.1"
-  },
+  }
 }
