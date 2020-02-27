@@ -26,5 +26,7 @@ $ npm install discord-canvas
 
 If you have a request for a new feature you can publish an issue on Github.  
   
+[Documentation](https://www.discord-canvas.net)
+  
 Made by xixi52 with ❤️
 
