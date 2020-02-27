@@ -1,8 +1,4 @@
----
-description: discord-canvas is a package to simplifie the usage of canvas for Discord !
----
-
-# Introduction
+# discord-canvas
 
 ## Easy to use !!
 
@@ -10,7 +6,7 @@ You want to develop a discord bot using the Discord.js bookstore and you want to
 
 ## Example
 
-![Welcome Card ](.gitbook/assets/welcome-image-1.png)
+![Welcome Card ](https://cdn.craftburg.net/stockage/img/discord/welcome-image.png)
 
 ## discord-canvas
 
