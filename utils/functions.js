@@ -48,11 +48,11 @@ module.exports = {
     getOpacityVariable(variables) {
         let formattedVariable = null,
         variable = variables.toLowerCase()
-        if(variable === "username") {
+        if(variable === "username-box") {
             formattedVariable = "opacityBoxUsername";
-        } else if(variable === "discriminator") {
+        } else if(variable === "discriminator-box") {
             formattedVariable = "opacityBoxDiscriminator";
-        } else if(variable === "message") {
+        } else if(variable === "message-box") {
             formattedVariable = "opacityBoxMessage";
         } else if(variable === "border") {
             formattedVariable = "opacityBorder";
@@ -74,6 +74,8 @@ module.exports = {
             formattedVariable = "title";
         } else if(variable === "message") {
             formattedVariable = "message";
+        } else if(variable === "number") {
+            formattedVariable = "numberMessage";
         } else {
             return null;
         }
