@@ -6,7 +6,7 @@
 
 ## Easy to use !!
 
-You want to develop a discord bot using the Discord.js library and you want to integrate nice image in Canvas? discord-canvas is made for you! You can create great welcome images, goodbye images and other fun images fully customisable using our many easy-to-use features!
+You want to develop a discord bot using the Discord.js library and you want to integrate nice images in Canvas? discord-canvas is made for you! You can create great welcome images, goodbye images and other fun images fully customizable using the many easy-to-use features!
 
 ## Installation
 
@@ -16,17 +16,13 @@ $ npm install --save discord-canvas
 
 ## [Click here to see the documentation!](https://www.discord-canvas.net)
 
-## Examples
+## Example
 
-![Welcome Card ](https://cdn.craftburg.net/stockage/img/discord/welcome-image.png)
-![Goodbye Card ](https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png)
+```js
+const Canvas = require("discord-canvas"),
+  Discord = require("discord.js");
 
-```JS
-const canvas = require("discord-canvas"),
-  Discord = require("discord.js"),
-  goodbyeCanvas = new canvas.Goodbye();
-
-let image = await goodbyeCanvas
+const image = await new Canvas.Goodbye()
   .setUsername("xixi52")
   .setDiscriminator("0001")
   .setNumber("140")
@@ -41,14 +37,18 @@ let image = await goodbyeCanvas
   .setBackground("https://cdn.craftburg.net/stockage/img/discord/background.jpg")
   .toAttachment();
 
-let attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
+const attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
 
 message.channel.send(attachment);
 ```
 
-If you have a request for a new feature you can publish an issue on Github.  
+<img src="https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png" height="250"></img>
 
-  
+## Contributing
+
+If you have a request for a new feature you can open an issue on Github. Pull requests are appreciated!
+
+## Credits
+
 Made by [xixi52](https://github.com/xixi52) with ❤️  
 Thanks to [Androz2091](https://github.com/Androz2091) for his help !
-
