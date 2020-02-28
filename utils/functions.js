@@ -1,7 +1,7 @@
 module.exports = {
 
     /**
-     * Gets variables color
+     * Gets variables and types
      * @param {object} prefix The type of variable
      * @param {object} variable The variable to change
      * @returns The variable formatted
