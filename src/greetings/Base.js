@@ -4,32 +4,33 @@ const { formatVariable, applyText } = require("../../utils/functions");
 module.exports = class Greeting {
 
     constructor(){
+        // Infos
         this.username = "Clyde";
+        this.avatar = `${__dirname}/../../assets/img/default-avatar.png`;
+        this.discriminator = "XXXX";
         this.guildName = "ServerName";
+        this.memberCount = "0";        
+        // Color
         this.colorTitleBorder = "#000000";
-
+        this.colorUsername = "#ffffff";
+        this.colorDiscriminator = "#ffffff";
+        this.colorHashtag = "#ffffff";
+        this.colorMessage = "#ffffff";
         this.colorMemberCount = "#ffffff";
-        this.textMemberCount = "- {count}th member !";
-        this.memberCount = "0";
-
+        this.colorMessageBox = "#000000";
+        this.colorUsernameBox = "#000000";
+        this.colorDiscriminatorBox = "#000000";
+        this.colorBorder = "#000000";
+        // Background IMG or color
         this.colorBackground = "#303136";
         this.backgroundImage = `${__dirname}/../../assets/img/1px.png`;
-        this.avatar = `${__dirname}/../../assets/img/default-avatar.png`;
-
+        // Opacity
+        this.opacityMessageBox = "0.4";
         this.opacityBorder = "0.4";
-        this.colorBorder = "#000000";
-
-        this.colorUsername = "#ffffff";
-        this.colorUsernameBox = "#000000";
-        this.opacityUsernameBox = "0.4";
-
-        this.discriminator = "XXXX";
-        this.colorDiscriminator = "#ffffff";
         this.opacityDiscriminatorBox = "0.4";
-        this.colorDiscriminatorBox = "#000000";
-
-        this.colorMessage = "#ffffff";
-        this.colorHashtag = "#ffffff";
+        this.opacityUsernameBox = "0.4";
+        // Text
+        this.textMemberCount = "- {count}th member !";
     }
 
     setAvatar(value) {
