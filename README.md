@@ -49,6 +49,6 @@ message.channel.send(attachment);
 If you have a request for a new feature you can publish an issue on Github.  
 
   
-Made by [xixi52](https://github.com/xixi52) with ❤️ 
+Made by [xixi52](https://github.com/xixi52) with ❤️  
 Thanks to [Androz2091](https://github.com/Androz2091) for his help !
 
