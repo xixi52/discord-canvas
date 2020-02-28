@@ -12,6 +12,7 @@ module.exports = class Greeting {
         this.textMemberCount = "- {count}th member !";
         this.memberCount = "0";
 
+        this.colorBackground = "#303136";
         this.backgroundImage = `${__dirname}/../../assets/img/1px.png`;
         this.avatar = `${__dirname}/../../assets/img/default-avatar.png`;
 
