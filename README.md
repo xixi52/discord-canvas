@@ -42,7 +42,7 @@ const attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png")
 message.channel.send(attachment);
 ```
 
-<img src="https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png" style="width: 50%;"></img>
+<img src="https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png" height="250"></img>
 
 ## Contributing
 
