@@ -6,7 +6,7 @@
 
 ## Easy to use !!
 
-You want to develop a discord bot using the Discord.js library and you want to integrate nice image in Canvas? discord-canvas is made for you! You can create great welcome images, goodbye images and other fun images fully customisable using our many easy-to-use features!
+You want to develop a discord bot using the Discord.js library and you want to integrate nice images in Canvas? discord-canvas is made for you! You can create great welcome images, goodbye images and other fun images fully customizable using the many easy-to-use features!
 
 ## Installation
 
@@ -19,10 +19,10 @@ $ npm install --save discord-canvas
 ## Example
 
 ```js
-const canvas = require("discord-canvas"),
+const Canvas = require("discord-canvas"),
   Discord = require("discord.js");
 
-const image = await new canvas.Goodbye()
+const image = await new Canvas.Goodbye()
   .setUsername("xixi52")
   .setDiscriminator("0001")
   .setNumber("140")
@@ -46,7 +46,7 @@ message.channel.send(attachment);
 
 ## Contributing
 
-If you have a request for a new feature you can publish an issue on Github.  
+If you have a request for a new feature you can open an issue on Github. Pull requests are appreciated!
 
 ## Credits
 
