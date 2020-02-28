@@ -16,17 +16,13 @@ $ npm install --save discord-canvas
 
 ## [Click here to see the documentation!](https://www.discord-canvas.net)
 
-## Examples
-
-![Welcome Card ](https://cdn.craftburg.net/stockage/img/discord/welcome-image.png)
-![Goodbye Card ](https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png)
+## Example
 
 ```js
 const canvas = require("discord-canvas"),
-  Discord = require("discord.js"),
-  goodbyeCanvas = new canvas.Goodbye();
+  Discord = require("discord.js");
 
-let image = await goodbyeCanvas
+const image = await new canvas.Goodbye()
   .setUsername("xixi52")
   .setDiscriminator("0001")
   .setNumber("140")
@@ -41,14 +37,18 @@ let image = await goodbyeCanvas
   .setBackground("https://cdn.craftburg.net/stockage/img/discord/background.jpg")
   .toAttachment();
 
-let attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
+const attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
 
 message.channel.send(attachment);
 ```
 
+<img src="https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png" style="width: 50%;"></img>
+
+## Contributing
+
 If you have a request for a new feature you can publish an issue on Github.  
 
-  
+## Credits
+
 Made by [xixi52](https://github.com/xixi52) with ❤️  
 Thanks to [Androz2091](https://github.com/Androz2091) for his help !
-
