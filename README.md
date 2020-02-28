@@ -21,7 +21,7 @@ $ npm install --save discord-canvas
 ![Welcome Card ](https://cdn.craftburg.net/stockage/img/discord/welcome-image.png)
 ![Goodbye Card ](https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png)
 
-```JS
+```js
 const canvas = require("discord-canvas"),
   Discord = require("discord.js"),
   goodbyeCanvas = new canvas.Goodbye();
