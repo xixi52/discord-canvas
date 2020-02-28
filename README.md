@@ -4,7 +4,7 @@ description: discord-canvas is a package to simplifie the usage of canvas for Di
 
 # Introduction
 
-[![downloadsBadge](https://img.shields.io/npm/dt/discord-canvas?style=for-the-badge)](https://npmjs.com/discord-canvas) [![versionBadge](https://img.shields.io/npm/v/discord-canvas?style=for-the-badge)](https://npmjs.com/discord-canvas) [![doc](https://img.shields.io/badge/Documentation-Click%20here-blue?style=for-the-badge)](https://www.discord-canvas.net) 
+[![downloadsBadge](https://img.shields.io/npm/dt/discord-canvas?style=for-the-badge)](https://npmjs.com/discord-canvas) [![versionBadge](https://img.shields.io/npm/v/discord-canvas?style=for-the-badge)](https://npmjs.com/discord-canvas) [![doc](https://img.shields.io/badge/Documentation-Click%20here-blue?style=for-the-badge)](https://www.discord-canvas.net)
 
 ## Easy to use !!
 
@@ -18,7 +18,7 @@ $ npm install --save discord-canvas
 
 ## Example
 
-```js
+```javascript
 const Canvas = require("discord-canvas"),
   Discord = require("discord.js");
 
@@ -52,3 +52,4 @@ If you have a request for a new feature you can open an issue on Github. Pull re
 
 Made by [xixi52](https://github.com/xixi52) with ❤️  
 Thanks to [Androz2091](https://github.com/Androz2091) for his help !
+

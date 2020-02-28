@@ -17,8 +17,8 @@ const canvas = require("discord-canvas"),
 let image = await goodbyeCanvas
   .setUsername("xixi52")
   .setDiscriminator("0001")
-  .setNumber("140")
-  .setServer("Server DEV")
+  .setMemberCount("140")
+  .setGuildName("Server DEV")
   .setAvatar("https://cdn.craftburg.net/stockage/img/discord/avatar.jpg")
   .setColor("border", "#8015EA")
   .setColor("username-box", "#8015EA")
@@ -73,15 +73,23 @@ Displays the Discord user discriminator
 Displays the Discord user avatar, you need use an URL
 
 ```javascript
-.setDiscriminator(URL)
+.setAvatar(URL)
 ```
 
-### `.setNumber`
+### `.setGuildName`
+
+Discplays the name of the guild
+
+```javascript
+.setGuildName(variable)
+```
+
+### `.setMemberCount`
 
 Discplays the number of users in guild
 
 ```javascript
-.setDiscriminator(variable)
+.setMemberCount(variable)
 ```
 
 ### `.setBackground` _\(optional\)_
