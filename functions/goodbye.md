@@ -105,13 +105,13 @@ Displays a background, you need use an URL
 You can translate or modify the text
 
 {% hint style="warning" %}
-You must keep the {server} and {number} variables
+You must keep the {server} and {count} variables
 {% endhint %}
 
 ```javascript
 .setText("title", "goodbye")
 .setText("message", "leaving from {server}")
-.setText("number", "- {number}th")
+.setText("member-count", "- {count}th member")
 ```
 
 ### `.setColor` _\(optional\)_
@@ -124,12 +124,12 @@ You can modify the color of any part of the card
 .setColor("avatar", "#ffffff") // CIRCLE
 .setColor("username", "#ffffff") // USER
 .setColor("username-box", "#ffffff") // USER BACKGROUND
-.setColor("ashtag", "#ffffff") // # COLOR
+.setColor("hashtag", "#ffffff") // # COLOR
 .setColor("discriminator", "#ffffff") // USER DISCRIMINATOR
 .setColor("discriminator-box", "#ffffff") // DISCRIMINATOR BACKGROUND
 .setColor("message", "#ffffff") // GOODBYE MESSAGE
 .setColor("message-box", "#ffffff") // GOODBYE MESSAGE BACKGROUND
-.setColor("number", "#ffffff") // NUMBER MESSAGE
+.setColor("member-count", "#ffffff") // MEMBERCOUNT MESSAGE
 .setColor("background", "#ffffff") // BACKGROUND COLOR
 .setColor("border", "#ffffff") // BORDER COLOR
 ```
