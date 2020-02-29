@@ -31,6 +31,7 @@ module.exports = class Greeting {
         this.opacityUsernameBox = "0.4";
         // Text
         this.textMemberCount = "- {count}th member !";
+        this.textServerName = "Welcome to {guildName}";
     }
 
     setAvatar(value) {
