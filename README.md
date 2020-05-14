@@ -27,14 +27,14 @@ const image = await new Canvas.Goodbye()
   .setDiscriminator("0001")
   .setMemberCount("140")
   .setGuildName("Server DEV")
-  .setAvatar("https://cdn.craftburg.net/stockage/img/discord/avatar.jpg")
+  .setAvatar("https://www.site.com/avatar.jpg")
   .setColor("border", "#8015EA")
   .setColor("username-box", "#8015EA")
   .setColor("discriminator-box", "#8015EA")
   .setColor("message-box", "#8015EA")
   .setColor("title", "#8015EA")
   .setColor("avatar", "#8015EA")
-  .setBackground("https://cdn.craftburg.net/stockage/img/discord/background.jpg")
+  .setBackground("https://site.com/background.jpg")
   .toAttachment();
 
 const attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
@@ -42,7 +42,7 @@ const attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png")
 message.channel.send(attachment);
 ```
 
-<img src="https://cdn.craftburg.net/stockage/img/discord/goodbye-image.png" height="250"></img>
+<img src="https://i.imgur.com/gh6Yp00.png" height="250"></img>
 
 ## Contributing
 
