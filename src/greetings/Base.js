@@ -1,36 +1,28 @@
 const Canvas = require("canvas");
-const { formatVariable, applyText } = require("../../utils/functions");
+const { formatVariable, applyText } = require(`${__dirname}/../../utils/functions`);
 
 module.exports = class Greeting {
 
     constructor(){
-        // Infos
         this.username = "Clyde";
-        this.avatar = `${__dirname}/../../assets/img/default-avatar.png`;
-        this.discriminator = "XXXX";
         this.guildName = "ServerName";
-        this.memberCount = "0";        
-        // Color
         this.colorTitleBorder = "#000000";
-        this.colorUsername = "#ffffff";
-        this.colorDiscriminator = "#ffffff";
-        this.colorHashtag = "#ffffff";
-        this.colorMessage = "#ffffff";
         this.colorMemberCount = "#ffffff";
-        this.colorMessageBox = "#000000";
-        this.colorUsernameBox = "#000000";
-        this.colorDiscriminatorBox = "#000000";
-        this.colorBorder = "#000000";
-        // Background IMG or color
-        this.colorBackground = "#303136";
-        this.backgroundImage = `${__dirname}/../../assets/img/1px.png`;
-        // Opacity
-        this.opacityMessageBox = "0.4";
-        this.opacityBorder = "0.4";
-        this.opacityDiscriminatorBox = "0.4";
-        this.opacityUsernameBox = "0.4";
-        // Text
         this.textMemberCount = "- {count}th member !";
+        this.memberCount = "0";
+        this.backgroundImage = `${__dirname}/../../assets/img/1px.png`;
+        this.avatar = `${__dirname}/../../assets/img/default-avatar.png`;
+        this.opacityBorder = "0.4";
+        this.colorBorder = "#000000";
+        this.colorUsername = "#ffffff";
+        this.colorUsernameBox = "#000000";
+        this.opacityUsernameBox = "0.4";
+        this.discriminator = "XXXX";
+        this.colorDiscriminator = "#ffffff";
+        this.opacityDiscriminatorBox = "0.4";
+        this.colorDiscriminatorBox = "#000000";
+        this.colorMessage = "#ffffff";
+        this.colorHashtag = "#ffffff";
     }
 
     setAvatar(value) {
@@ -115,12 +107,12 @@ module.exports = class Greeting {
         // Draw username
         ctx.globalAlpha = 1;
         ctx.fillStyle = this.colorUsername;
-        ctx.font = applyText(canvas, this.username, 48);
+        ctx.font = applyText(canvas, this.username, 48, 600, "Bold");
         ctx.fillText(this.username, canvas.width - 660, canvas.height - 248);
 
         // Draw guild name
         ctx.fillStyle = this.colorMessage;
-        ctx.font = applyText(canvas, guildName, 53);
+        ctx.font = applyText(canvas, guildName, 53, 600, "Bold");
         ctx.fillText(guildName, canvas.width - 690, canvas.height - 62);
 
         // Draw discriminator

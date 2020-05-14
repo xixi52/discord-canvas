@@ -1,4 +1,4 @@
-const Greeting = require("./Base");
+const Greeting = require(`${__dirname}/Base`);
 
 module.exports = class Goodbye extends Greeting {
     constructor(){
@@ -6,6 +6,5 @@ module.exports = class Goodbye extends Greeting {
         this.textTitle = "GOODBYE";
         this.textMessage = "Leaving from {server}";
         this.colorTitle = "#df0909";
-        this.colorAvatar = "#df0909";
     }
 };
