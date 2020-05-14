@@ -16,7 +16,7 @@ $ npm install --save discord-canvas
 
 ## [Click here to see the documentation!](https://www.discord-canvas.net)
 
-## Example
+## Example GoodBye
 
 ```js
 const Canvas = require("discord-canvas"),
@@ -43,6 +43,23 @@ message.channel.send(attachment);
 ```
 
 <img src="https://i.imgur.com/gh6Yp00.png" height="250"></img>
+
+## Example Fortnite Shop
+
+```js
+const Canvas = require("discord-canvas"),
+  Discord = require("discord.js");
+
+const image = await shop
+  .setToken("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx")
+  .toAttachment();
+
+let attachment = new Discord.Attachment(image, "FortniteShop.png");
+
+message.channel.send(attachment);
+```
+
+<img src="https://i.imgur.com/frrTvnA.jpg" height="600"></img>
 
 ## Contributing
 
