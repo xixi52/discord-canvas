@@ -77,3 +77,17 @@ You must keep the {date} variable
 .setText("footer", "Generated with discord-canvas - fnbr.co")
 ```
 
+### `.setBackground` _\(optional\)_
+
+You can modify the background of the shop \(color code or url\)
+
+```javascript
+.setBackground("#444555")
+
+//or
+
+.setBackground("https://www.site.com/example.png")
+```
+
+
+
