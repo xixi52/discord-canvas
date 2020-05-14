@@ -19,14 +19,14 @@ let image = await goodbyeCanvas
   .setDiscriminator("0001")
   .setMemberCount("140")
   .setGuildName("Server DEV")
-  .setAvatar("https://cdn.craftburg.net/stockage/img/discord/avatar.jpg")
+  .setAvatar("https://www.site.com/avatar.jpg")
   .setColor("border", "#8015EA")
   .setColor("username-box", "#8015EA")
   .setColor("discriminator-box", "#8015EA")
   .setColor("message-box", "#8015EA")
   .setColor("title", "#8015EA")
   .setColor("avatar", "#8015EA")
-  .setBackground("https://cdn.craftburg.net/stockage/img/discord/background.jpg")
+  .setBackground("https://www.site.com/background.jpg")
   .toAttachment();
 
 let attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
