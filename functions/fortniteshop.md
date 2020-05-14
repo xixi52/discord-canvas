@@ -1,12 +1,12 @@
 ---
-description: Generate a complex Fortnite items shop easily! The canvas is responsive.
+description: Generate a complex Fortnite's items shop easily! The canvas is responsive.
 ---
 
 # FortniteShop
 
 ## Example
 
-Here is an example of Fortnite items shop:
+Here is an example of Fortnite's items shop:
 
 ![It&apos;s an example](../.gitbook/assets/fortniteshop.png)
 
@@ -29,11 +29,11 @@ The canvas is saved five days after the first generation for more performance.
 
 ## Functions
 
-Here is the complete list of available functions
+There is the complete list of available functions
 
 ### `.setToken`
 
-Define your [fnbr.co](https://fnbr.co/api/docs) token
+Define your [fnbr.co](https://fnbr.co/api/docs) token!
 
 {% hint style="danger" %}
 You must have a fnbr api access to use this module!
@@ -46,7 +46,7 @@ You must have a fnbr api access to use this module!
 ### `.lang` _\(optional\)_
 
 Define the language of date!  
-Click [**here** ](https://www.ge.com/digital/documentation/predix-services/c_custom_locale_support.html)for list of all languages available
+Click [**here** ](https://www.ge.com/digital/documentation/predix-services/c_custom_locale_support.html)for the list of all languages available
 
 ```javascript
 .lang("en")
