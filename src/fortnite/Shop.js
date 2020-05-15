@@ -136,7 +136,6 @@ module.exports = class FortniteShop {
       files.forEach(function (file) {
         if (file.split(".")[1] === "png") {
           if (Number(file.split("_")[0]) < Date.now() - 86400000 * 5) {
-            console.log(file);
             fs.unlinkSync(
               `${__dirname}/../../assets/img/fortnite/shop/cache/${file}`
             );
