@@ -3,7 +3,7 @@ const Canvas = require("canvas");
 Canvas.registerFont(`${__dirname}/assets/fonts/theboldfont.ttf`, { family: "Bold" });
 // Register SketchMatch font
 Canvas.registerFont(`${__dirname}/assets/fonts/SketchMatch.ttf`, { family: "SketchMatch" });
-// Register SketchMatch font
+// Register Burbank font
 Canvas.registerFont(`${__dirname}/assets/fonts/Burbank-Big-Condensed-Bold-Font.otf`, { family: "Burbank" });
 
 module.exports.Welcome = require('./src/greetings/Welcome');
