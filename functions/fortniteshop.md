@@ -8,7 +8,7 @@ description: Generate a complex Fortnite's items shop easily! The canvas is resp
 
 Here is an example of Fortnite's items shop:
 
-![It&apos;s an example](../.gitbook/assets/fortniteshop.png)
+![It&apos;s an example](../.gitbook/assets/1592092800000_en.png)
 
 ```javascript
 const canvas = require("discord-canvas"),
