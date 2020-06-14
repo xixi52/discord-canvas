@@ -3,9 +3,12 @@ const Canvas = require("canvas");
 Canvas.registerFont(`${__dirname}/assets/fonts/theboldfont.ttf`, { family: "Bold" });
 // Register SketchMatch font
 Canvas.registerFont(`${__dirname}/assets/fonts/SketchMatch.ttf`, { family: "SketchMatch" });
-// Register Burbank font
-Canvas.registerFont(`${__dirname}/assets/fonts/Burbank-Big-Condensed-Bold-Font.otf`, { family: "Burbank" });
+// Register SketchMatch font
+Canvas.registerFont(`${__dirname}/assets/fonts/LuckiestGuy-Regular.ttf`, { family: "luckiest guy" });
+// Register KeepCalm font
+Canvas.registerFont(`${__dirname}/assets/fonts/KeepCalm-Medium.ttf`, { family: "KeepCalm" });
 
 module.exports.Welcome = require('./src/greetings/Welcome');
 module.exports.Goodbye = require('./src/greetings/Goodbye');
 module.exports.FortniteShop = require('./src/fortnite/Shop');
+module.exports.FortniteStats = require('./src/fortnite/Stats');
