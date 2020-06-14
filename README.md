@@ -59,7 +59,7 @@ let attachment = new Discord.Attachment(image, "FortniteShop.png");
 message.channel.send(attachment);
 ```
 
-<img src="https://i.imgur.com/3qO81V8.jpg" height="400"></img>
+<img src="https://i.imgur.com/3qO81V8.jpg" height="600"></img>
 
 ## Example Fortnite Stat
 
@@ -84,7 +84,7 @@ let attachment = new Discord.Attachment(image.toBuffer(), "FortniteStat.png");
 message.channel.send(attachment);
 ```
 
-<img src="https://i.imgur.com/xqnabX5.png" height="400"></img>
+<img src="https://i.imgur.com/xqnabX5.png" height="450"></img>
 
 ## Contributing
 
