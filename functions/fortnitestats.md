@@ -6,7 +6,9 @@ description: Generate a Fortnite's stats image easily!
 
 ## Example
 
-![Here is an example of Fortnite&apos;s stats:](../.gitbook/assets/stat.png)
+Here is an example of Fortnite's stats:
+
+![It&apos;s an example](../.gitbook/assets/stat.png)
 
 ```javascript
 const canvas = require("discord-canvas"),
