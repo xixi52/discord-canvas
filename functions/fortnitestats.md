@@ -1,18 +1,18 @@
 ---
-description: Generate a Fortnite's stat image easily!
+description: Generate a Fortnite's stats image easily!
 ---
 
-# FortniteStat
+# FortniteStats
 
 ## Example
 
-Here is an example of Fortnite's stat:
+Here is an example of Fortnite's stats:
 
 ![It&apos;s an example](../.gitbook/assets/stat.png)
 
 ```javascript
 const canvas = require("discord-canvas"),
-  stat = new canvas.FortniteStat();
+  stat = new canvas.FortniteStats();
   
 const user = "CBRG xixi52 YT",
   platform = "pc";
@@ -26,7 +26,7 @@ let image = await stat
 if (platform !== "pc" && platform !== "xbl" && platform !== "psn") return message.channel.send("Please enter a valid platform")
 if (!image) return message.channel.send("User not found")
 
-let attachment = new Discord.Attachment(image.toBuffer(), "FortniteStat.png");
+let attachment = new Discord.Attachment(image.toBuffer(), "FortniteStats.png");
 
 message.channel.send(attachment);
 ```
