@@ -7,5 +7,5 @@
 * [Welcome](functions/welcome.md)
 * [Goodbye](functions/goodbye.md)
 * [FortniteShop](functions/fortniteshop.md)
-* [FortniteStat](functions/fortnitestat.md)
+* [FortniteStats](functions/fortnitestats.md)
 
