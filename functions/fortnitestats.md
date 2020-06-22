@@ -75,7 +75,7 @@ You can translate or modify the text
 .setText("kD", "K/D")
 .setText("wins", "WINS")
 .setText("win", "WIN")
-.setText("kils", "KILLS")
+.setText("kills", "KILLS")
 .setText("kill", "KILL")
 .setText("matches", "MATCHES")
 .setText("match", "MATCH")
