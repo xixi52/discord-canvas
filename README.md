@@ -61,16 +61,16 @@ message.channel.send(attachment);
 
 <img src="https://i.imgur.com/3qO81V8.jpg" height="600"></img>
 
-## Example Fortnite Stat
+## Example Fortnite Stats
 
 ```js
 const canvas = require("discord-canvas"),
-  stat = new canvas.FortniteStat();
+  stats = new canvas.FortniteStats();
   
 const user = "CBRG xixi52 YT",
   platform = "pc";
   
-let image = await stat
+let image = await stats
   .setToken("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx")
   .setUser(user)
   .setPlatform(platform)
@@ -79,7 +79,7 @@ let image = await stat
 if (platform !== "pc" && platform !== "xbl" && platform !== "psn") return message.channel.send("Please enter a valid platform")
 if (!image) return message.channel.send("User not found")
 
-let attachment = new Discord.Attachment(image.toBuffer(), "FortniteStat.png");
+let attachment = new Discord.Attachment(image.toBuffer(), "FortniteStats.png");
 
 message.channel.send(attachment);
 ```
