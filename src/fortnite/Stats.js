@@ -6,7 +6,7 @@ const {
   applyText,
 } = require(`${__dirname}/../../utils/functions`);
 
-module.exports = class FortniteShop {
+module.exports = class FortniteStats {
   constructor() {
     this.token = null;
     this.platform = null;
@@ -100,7 +100,7 @@ module.exports = class FortniteShop {
           ctx.fillRect(671, 605, 257, 4);
           ctx.globalAlpha = 1;
           // Draw xbox, pc or psn logo
-          let iconPlatform = await Canvas.loadImage(`${__dirname}/../../assets/img/fortnite/stats/${platform}.png`);
+          let iconPlatform = await Canvas.loadImage(`${__dirname}/../../assets/img/fortnite/stats/${this.platform}.png`);
           ctx.drawImage(iconPlatform, 62, 43, 60, 60);
           // Draw crown logo
           let iconCrown = await Canvas.loadImage(`${__dirname}/../../assets/img/fortnite/stats/crown.png`);
