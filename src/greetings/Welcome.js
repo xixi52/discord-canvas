@@ -1,7 +1,7 @@
-const Greeting = require(`${__dirname}/Base`);
+const Greeting = require("./Base");
 
 module.exports = class Welcome extends Greeting {
-    constructor(){
+    constructor() {
         super();
         this.textTitle = "WELCOME";
         this.textMessage = "Welcome in {server}";
