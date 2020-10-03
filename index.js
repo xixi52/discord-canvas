@@ -8,6 +8,7 @@ Canvas.registerFont(`${__dirname}/assets/fonts/LuckiestGuy-Regular.ttf`, { famil
 // Register KeepCalm font
 Canvas.registerFont(`${__dirname}/assets/fonts/KeepCalm-Medium.ttf`, { family: "KeepCalm" });
 
+module.exports.Base = require('./src/greetings/Base');
 module.exports.Welcome = require('./src/greetings/Welcome');
 module.exports.Goodbye = require('./src/greetings/Goodbye');
 module.exports.FortniteShop = require('./src/fortnite/Shop');
