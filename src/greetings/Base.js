@@ -23,6 +23,7 @@ module.exports = class Greeting {
         this.colorDiscriminatorBox = "#000000";
         this.colorMessage = "#ffffff";
         this.colorHashtag = "#ffffff";
+        this.colorBackground = "000000";
     }
 
     setAvatar(value) {
