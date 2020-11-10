@@ -188,8 +188,20 @@ module.exports = class RankCard {
         ctx.fillText(".", 240 + 50 + 50 + 25 + 50 / 2, 295 + 10 + 35);
       } else {
         ctx.globalAlpha = 1;
-        let badge1 = await Canvas.loadImage(this.badge1);
-        ctx.drawImage(badge1, 240 + 50 + 50 + 25, 295 + 10, 50, 50);
+        if (
+          this.badge1.toLowerCase() === "bronze" ||
+          this.badge1.toLowerCase() === "silver" ||
+          this.badge1.toLowerCase() === "gold" ||
+          this.badge1.toLowerCase() === "diamond"
+        ) {
+          let badge1 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/bubble_${this.badge1.toLowerCase()}.png`
+          );
+          ctx.drawImage(badge1, 240 + 50 + 50 + 25, 295 + 10, 50, 50);
+        } else {
+          let badge1 = await Canvas.loadImage(this.badge1);
+          ctx.drawImage(badge1, 240 + 50 + 50 + 25, 295 + 10, 50, 50);
+        }
       }
       if (!this.badge2) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -198,8 +210,20 @@ module.exports = class RankCard {
         ctx.fillText(".", 240 + 50 + 50 + 25 + 50 + 25 + 50 / 2, 295 + 10 + 35);
       } else {
         ctx.globalAlpha = 1;
-        let badge2 = await Canvas.loadImage(this.badge2);
-        ctx.drawImage(badge2, 240 + 50 + 50 + 25 + 50 + 25, 295 + 10, 50, 50);
+        if (
+          this.badge2.toLowerCase() === "bronze" ||
+          this.badge2.toLowerCase() === "silver" ||
+          this.badge2.toLowerCase() === "gold" ||
+          this.badge2.toLowerCase() === "diamond"
+        ) {
+          let badge2 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/speaker_${this.badge2.toLowerCase()}.png`
+          );
+          ctx.drawImage(badge2, 240 + 50 + 50 + 25 + 50 + 25, 295 + 10, 50, 50);
+        } else {
+          let badge2 = await Canvas.loadImage(this.badge2);
+          ctx.drawImage(badge2, 240 + 50 + 50 + 25 + 50 + 25, 295 + 10, 50, 50);
+        }
       }
       if (!this.badge3) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -212,14 +236,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge3 = await Canvas.loadImage(this.badge3);
-        ctx.drawImage(
-          badge3,
-          240 + 50 + 50 + 25 + (50 + 25) * 2,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge3.toLowerCase() === "bronze" ||
+          this.badge3.toLowerCase() === "silver" ||
+          this.badge3.toLowerCase() === "gold" ||
+          this.badge3.toLowerCase() === "diamond"
+        ) {
+          let badge3 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/stream_${this.badge3.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge3,
+            240 + 50 + 50 + 25 + (50 + 25) * 2,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge3 = await Canvas.loadImage(this.badge3);
+          ctx.drawImage(
+            badge3,
+            240 + 50 + 50 + 25 + (50 + 25) * 2,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
       if (!this.badge4) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -232,14 +274,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge4 = await Canvas.loadImage(this.badge4);
-        ctx.drawImage(
-          badge4,
-          240 + 50 + 50 + 25 + (50 + 25) * 3,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge4.toLowerCase() === "bronze" ||
+          this.badge4.toLowerCase() === "silver" ||
+          this.badge4.toLowerCase() === "gold" ||
+          this.badge4.toLowerCase() === "diamond"
+        ) {
+          let badge4 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/picture_${this.badge4.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge4,
+            240 + 50 + 50 + 25 + (50 + 25) * 3,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge4 = await Canvas.loadImage(this.badge4);
+          ctx.drawImage(
+            badge4,
+            240 + 50 + 50 + 25 + (50 + 25) * 3,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
       if (!this.badge5) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -252,14 +312,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge5 = await Canvas.loadImage(this.badge5);
-        ctx.drawImage(
-          badge5,
-          240 + 50 + 50 + 25 + (50 + 25) * 4,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge5.toLowerCase() === "bronze" ||
+          this.badge5.toLowerCase() === "silver" ||
+          this.badge5.toLowerCase() === "gold" ||
+          this.badge5.toLowerCase() === "diamond"
+        ) {
+          let badge5 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/like_${this.badge5.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge5,
+            240 + 50 + 50 + 25 + (50 + 25) * 4,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge5 = await Canvas.loadImage(this.badge5);
+          ctx.drawImage(
+            badge5,
+            240 + 50 + 50 + 25 + (50 + 25) * 4,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
       if (!this.badge6) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -272,14 +350,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge6 = await Canvas.loadImage(this.badge6);
-        ctx.drawImage(
-          badge6,
-          240 + 50 + 50 + 25 + (50 + 25) * 5,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge6.toLowerCase() === "bronze" ||
+          this.badge6.toLowerCase() === "silver" ||
+          this.badge6.toLowerCase() === "gold" ||
+          this.badge6.toLowerCase() === "diamond"
+        ) {
+          let badge6 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/star_${this.badge6.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge6,
+            240 + 50 + 50 + 25 + (50 + 25) * 5,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge6 = await Canvas.loadImage(this.badge6);
+          ctx.drawImage(
+            badge6,
+            240 + 50 + 50 + 25 + (50 + 25) * 5,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
       if (!this.badge7) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -292,14 +388,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge7 = await Canvas.loadImage(this.badge7);
-        ctx.drawImage(
-          badge7,
-          240 + 50 + 50 + 25 + (50 + 25) * 6,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge7.toLowerCase() === "bronze" ||
+          this.badge7.toLowerCase() === "silver" ||
+          this.badge7.toLowerCase() === "gold" ||
+          this.badge7.toLowerCase() === "diamond"
+        ) {
+          let badge7 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/boost_${this.badge7.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge7,
+            240 + 50 + 50 + 25 + (50 + 25) * 6,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge7 = await Canvas.loadImage(this.badge7);
+          ctx.drawImage(
+            badge7,
+            240 + 50 + 50 + 25 + (50 + 25) * 6,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
       if (!this.badge8) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -312,14 +426,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge8 = await Canvas.loadImage(this.badge8);
-        ctx.drawImage(
-          badge8,
-          240 + 50 + 50 + 25 + (50 + 25) * 7,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge8.toLowerCase() === "bronze" ||
+          this.badge8.toLowerCase() === "silver" ||
+          this.badge8.toLowerCase() === "gold" ||
+          this.badge8.toLowerCase() === "diamond"
+        ) {
+          let badge8 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/money_${this.badge8.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge8,
+            240 + 50 + 50 + 25 + (50 + 25) * 7,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge8 = await Canvas.loadImage(this.badge8);
+          ctx.drawImage(
+            badge8,
+            240 + 50 + 50 + 25 + (50 + 25) * 7,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
       if (!this.badge9) {
         ctx.globalAlpha = this.opacityNoBadges;
@@ -332,14 +464,32 @@ module.exports = class RankCard {
         );
       } else {
         ctx.globalAlpha = 1;
-        let badge9 = await Canvas.loadImage(this.badge9);
-        ctx.drawImage(
-          badge9,
-          240 + 50 + 50 + 25 + (50 + 25) * 8,
-          295 + 10,
-          50,
-          50
-        );
+        if (
+          this.badge9.toLowerCase() === "bronze" ||
+          this.badge9.toLowerCase() === "silver" ||
+          this.badge9.toLowerCase() === "gold" ||
+          this.badge9.toLowerCase() === "diamond"
+        ) {
+          let badge9 = await Canvas.loadImage(
+            `${__dirname}/../../assets/img/rank/bot_${this.badge9.toLowerCase()}.png`
+          );
+          ctx.drawImage(
+            badge9,
+            240 + 50 + 50 + 25 + (50 + 25) * 8,
+            295 + 10,
+            50,
+            50
+          );
+        } else {
+          let badge9 = await Canvas.loadImage(this.badge9);
+          ctx.drawImage(
+            badge9,
+            240 + 50 + 50 + 25 + (50 + 25) * 8,
+            295 + 10,
+            50,
+            50
+          );
+        }
       }
     }
 
