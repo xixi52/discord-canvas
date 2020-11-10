@@ -23,7 +23,7 @@ module.exports = class RankCard {
     this.colorUsername = "#ffffff";
     this.colorReputation = "#ffffff";
     this.colorBackgroundBar = "#000000";
-    this.colorxpNeeded = "#ffffff";
+    this.colorNeededXP = "#ffffff";
     this.colorBar = "#ffffff";
     this.colorNoBadges = "#000000";
     this.colorBadgesBox = "#000000";
@@ -35,7 +35,7 @@ module.exports = class RankCard {
     this.opacityReputation = "1";
     this.opacityNoBadges = "0.4";
     this.textLevel = "lvl {level}";
-    this.textxpNeeded = "{current}/{needed} for next rank";
+    this.textNeededXP = "{current}/{needed} for next rank";
     this.textReputation = "+{reputation} rep";
     this.xpCurrent = 8000;
     this.xpNeeded = 12000;
@@ -542,12 +542,12 @@ module.exports = class RankCard {
     // XP
     ctx.globalAlpha = 1;
     const latestXP = Number(this.xpNeeded) - Number(this.xpCurrent);
-    const textXPEdited = this.textxpNeeded
+    const textXPEdited = this.textNeededXP
       .replace(/{needed}/g, this.xpNeeded)
       .replace(/{current}/g, this.xpCurrent)
       .replace(/{latest}/g, latestXP);
     ctx.textAlign = "center";
-    ctx.fillStyle = this.colorxpNeeded;
+    ctx.fillStyle = this.colorNeededXP;
     ctx.font = applyText(canvas, textXPEdited, 25, 690, "Bold");
     ctx.fillText(
       textXPEdited,
