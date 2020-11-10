@@ -50,7 +50,7 @@ message.channel.send(attachment);
 const Canvas = require("discord-canvas"),
   Discord = require("discord.js");
 
-const image = await new Canvas.Goodbye()
+const image = await new Canvas.RankCard()
     .setAvatar("xixi52")
     .setXP("current", 500)
     .setXP("needed", 1000)
