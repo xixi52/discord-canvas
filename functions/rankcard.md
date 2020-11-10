@@ -179,7 +179,7 @@ You can modify the corner radius of canvas.
 
 ### `.setAddon` _\(optional\)_
 
-You can disable or enable a addon
+You can disable or enable an addon
 
 {% hint style="warning" %}
 You must use false or true value
