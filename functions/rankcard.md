@@ -15,7 +15,7 @@ const canvas = require("discord-canvas"),
   rankCardCanvas = new canvas.RankCard();
 
 let image = await rankCardCanvas
-    .setAvatar(message.author.avatarURL({ format: "png", size: 1024 }))
+    .setAvatar("xixi52")
     .setXP("current", 500)
     .setXP("needed", 1000)
     .setLevel(7)
