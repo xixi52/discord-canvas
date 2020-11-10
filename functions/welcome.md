@@ -29,7 +29,7 @@ let image = await welcomeCanvas
   .setBackground("https://www.site.com/background.jpg")
   .toAttachment();
 
-let attachment = new Discord.Attachment(image.toBuffer(), "welcome-image.png");
+let attachment = new Discord.MessageAttachment(image.toBuffer(), "welcome-image.png");
 
 message.channel.send(attachment);
 ```

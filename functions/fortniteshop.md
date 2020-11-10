@@ -18,7 +18,7 @@ let image = await shop
   .setToken("xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx")
   .toAttachment();
 
-let attachment = new Discord.Attachment(image, "FortniteShop.png");
+let attachment = new Discord.MessageAttachment(image, "FortniteShop.png");
 
 message.channel.send(attachment);
 ```
