@@ -10,10 +10,10 @@ module.exports = class RankCard {
     this.rankName = "rank Name";
     this.username = "username";
     this.reputation = "0";
-    this.reputationAddon = true;
-    this.rankAddon = true;
-    this.rankNameAddon = true;
-    this.badgesAddon = true;
+    this.addonReputation = true;
+    this.addonRank = true;
+    this.addonRankName = true;
+    this.addonBadges = true;
     this.colorBackground = "#000000";
     this.colorLevelBox = "#ff7b4b";
     this.colorReputationBox = "#ff7b4b";
@@ -23,7 +23,7 @@ module.exports = class RankCard {
     this.colorUsername = "#ffffff";
     this.colorReputation = "#ffffff";
     this.colorBackgroundBar = "#000000";
-    this.colorNeededXP = "#ffffff";
+    this.colorxpNeeded = "#ffffff";
     this.colorBar = "#ffffff";
     this.colorNoBadges = "#000000";
     this.colorBadgesBox = "#000000";
@@ -35,10 +35,10 @@ module.exports = class RankCard {
     this.opacityReputation = "1";
     this.opacityNoBadges = "0.4";
     this.textLevel = "lvl {level}";
-    this.textNeededXP = "{current}/{needed} for next rank";
+    this.textxpNeeded = "{current}/{needed} for next rank";
     this.textReputation = "+{reputation} rep";
-    this.currentXP = 8000;
-    this.neededXP = 12000;
+    this.xpCurrent = 8000;
+    this.xpNeeded = 12000;
     this.badge1 = null;
     this.badge2 = null;
     this.badge3 = null;
@@ -55,8 +55,39 @@ module.exports = class RankCard {
     return this;
   }
 
+  setUsername(value) {
+    this.username = value;
+    return this;
+  }
+
+  setRank(value) {
+    this.rank = value;
+    return this;
+  }
+
+  setLevel(value) {
+    this.level = value;
+    return this;
+  }
+
+  setReputation(value) {
+    this.reputation = value;
+    return this;
+  }
+
+  setRankName(value) {
+    this.rankName = value;
+    return this;
+  }
+
   setBackground(value) {
     this.backgroundImage = value;
+    return this;
+  }
+
+  setXP(variable, value) {
+    const formattedVariable = formatVariable("xp", variable);
+    if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
   }
 
@@ -78,10 +109,25 @@ module.exports = class RankCard {
     return this;
   }
 
-  setBadge(variable, value) {
-    const formattedVariable = formatVariable("badge", variable);
+  setAddon(variable, value) {
+    const formattedVariable = formatVariable("addon", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
     return this;
+  }
+
+  setBadge(variable, value) {
+    if (Number(variable) > 0 && Number(variable) < 10) {
+      if (Number(variable) === 1) this.badge1 = value;
+      if (Number(variable) === 2) this.badge2 = value;
+      if (Number(variable) === 3) this.badge3 = value;
+      if (Number(variable) === 4) this.badge4 = value;
+      if (Number(variable) === 5) this.badge5 = value;
+      if (Number(variable) === 6) this.badge6 = value;
+      if (Number(variable) === 7) this.badge7 = value;
+      if (Number(variable) === 8) this.badge8 = value;
+      if (Number(variable) === 9) this.badge9 = value;
+      return this;
+    }
   }
 
   setRadius(value) {
@@ -144,7 +190,7 @@ module.exports = class RankCard {
     ctx.fillText(lvlText, 50 + 30 + 180 / 2, 30 + 180 + 30 + 38);
 
     // Rep
-    if (this.reputationAddon) {
+    if (this.addonReputation) {
       ctx.fillStyle = this.colorReputationBox;
       ctx.globalAlpha = this.opacityReputation;
       ctx.fillRect(50 + 30, 30 + 180 + 30 + 50 + 30, 180, 50);
@@ -162,13 +208,13 @@ module.exports = class RankCard {
     ctx.fillText(this.username, 50 + 240 + 45 + 5, 80);
 
     // Rank
-    if (this.rankAddon) {
+    if (this.addonRank) {
       ctx.textAlign = "right";
       ctx.fillStyle = this.colorRank;
       ctx.font = applyText(canvas, "#" + this.rank, 45, 194, "Bold");
       ctx.fillText("#" + this.rank, canvas.width - 50 - 5, 80);
     }
-    if (this.rankNameAddon) {
+    if (this.addonRankName) {
       ctx.textAlign = "left";
       ctx.fillStyle = this.colorRankName;
       ctx.font = applyText(canvas, this.rankName, 35, 690, "Bold");
@@ -176,7 +222,7 @@ module.exports = class RankCard {
     }
 
     // Badges
-    if (this.badgesAddon) {
+    if (this.addonBadges) {
       ctx.fillStyle = this.colorBadgesBox;
       ctx.globalAlpha = this.opacityBadges;
       ctx.fillRect(240 + 50 + 50, 295, 700, 70);
@@ -495,13 +541,13 @@ module.exports = class RankCard {
 
     // XP
     ctx.globalAlpha = 1;
-    const latestXP = Number(this.neededXP) - Number(this.currentXP);
-    const textXPEdited = this.textNeededXP
-      .replace(/{needed}/g, this.neededXP)
-      .replace(/{current}/g, this.currentXP)
+    const latestXP = Number(this.xpNeeded) - Number(this.xpCurrent);
+    const textXPEdited = this.textxpNeeded
+      .replace(/{needed}/g, this.xpNeeded)
+      .replace(/{current}/g, this.xpCurrent)
       .replace(/{latest}/g, latestXP);
     ctx.textAlign = "center";
-    ctx.fillStyle = this.colorNeededXP;
+    ctx.fillStyle = this.colorxpNeeded;
     ctx.font = applyText(canvas, textXPEdited, 25, 690, "Bold");
     ctx.fillText(
       textXPEdited,
@@ -545,7 +591,7 @@ module.exports = class RankCard {
     ctx.fillRect(240 + 50 + 50, 80 + 45 + 10 + 40, 700, 50);
     ctx.fillStyle = this.colorBar;
     ctx.globalAlpha = 1;
-    const percent = (100 * this.currentXP) / this.neededXP;
+    const percent = (100 * this.xpCurrent) / this.xpNeeded;
     const progress = (percent * 700) / 100;
     ctx.fillRect(240 + 50 + 50, 80 + 45 + 10 + 40, progress, 50);
     ctx.restore();
