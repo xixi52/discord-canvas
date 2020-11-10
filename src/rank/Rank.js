@@ -344,6 +344,7 @@ module.exports = class RankCard {
     }
 
     // XP
+    ctx.globalAlpha = 1;
     const latestXP = Number(this.neededXP) - Number(this.currentXP);
     const textXPEdited = this.textNeededXP
       .replace(/{needed}/g, this.neededXP)
