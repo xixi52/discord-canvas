@@ -8,8 +8,10 @@ module.exports = class RankCard {
     this.level = "1";
     this.rank = "10";
     this.rankName = "rank Name";
-    this.username = "username";
     this.reputation = "0";
+    this.username = "username";
+    this.xpCurrent = 8000;
+    this.xpNeeded = 12000;
     this.addonReputation = true;
     this.addonRank = true;
     this.addonRankName = true;
@@ -23,7 +25,7 @@ module.exports = class RankCard {
     this.colorUsername = "#ffffff";
     this.colorReputation = "#ffffff";
     this.colorBackgroundBar = "#000000";
-    this.colorNeededXP = "#ffffff";
+    this.colorNeededXp = "#ffffff";
     this.colorBar = "#ffffff";
     this.colorNoBadges = "#000000";
     this.colorBadgesBox = "#000000";
@@ -35,10 +37,8 @@ module.exports = class RankCard {
     this.opacityReputation = "1";
     this.opacityNoBadges = "0.4";
     this.textLevel = "lvl {level}";
-    this.textNeededXP = "{current}/{needed} for next rank";
+    this.textNeededXp = "{current}/{needed} for next rank";
     this.textReputation = "+{reputation} rep";
-    this.xpCurrent = 8000;
-    this.xpNeeded = 12000;
     this.badge1 = null;
     this.badge2 = null;
     this.badge3 = null;
@@ -542,12 +542,12 @@ module.exports = class RankCard {
     // XP
     ctx.globalAlpha = 1;
     const latestXP = Number(this.xpNeeded) - Number(this.xpCurrent);
-    const textXPEdited = this.textNeededXP
+    const textXPEdited = this.textNeededXp
       .replace(/{needed}/g, this.xpNeeded)
       .replace(/{current}/g, this.xpCurrent)
       .replace(/{latest}/g, latestXP);
     ctx.textAlign = "center";
-    ctx.fillStyle = this.colorNeededXP;
+    ctx.fillStyle = this.colorNeededXp;
     ctx.font = applyText(canvas, textXPEdited, 25, 690, "Bold");
     ctx.fillText(
       textXPEdited,
