@@ -48,27 +48,26 @@ message.channel.send(attachment);
 
 ```js
 const Canvas = require("discord-canvas"),
-  Discord = require("discord.js");
+Discord = require("discord.js");
 
-const image = await new Canvas.RankCard()
-    .setAvatar("xixi52")
-    .setXP("current", 500)
-    .setXP("needed", 1000)
-    .setLevel(7)
-    .setRank(2)
-    .setReputation(450)
-    .setRankName("professional")
-    .setUsername("xixi52")
-    .setBadge(1, "gold")
-    .setBadge(3, "diamond")
-    .setBadge(5, "silver")
-    .setBadge(6, "bronze")
-    .setBackground("https://www.site.com/background.jpg")
-    .toAttachment();
+let image = await new canvas.RankCard()
+.setAddon("xp", false)
+.setAddon("rank", false)
+.setAvatar(message.author.avatarURL)
+.setLevel(7)
+.setReputation(450)
+.setRankName("professional")
+.setUsername("xixi52")
+.setBadge(1, "gold")
+.setBadge(3, "diamond")
+.setBadge(5, "silver")
+.setBadge(6, "bronze")
+.setBackground("https://www.site.com/background.jpg")
+.toAttachment();
 
-const attachment = new Discord.MessageAttachment(image.toBuffer(), "rank-card.png");
+let attachment = new MessageAttachment(image.toBuffer(), "rank-card.png");
 
-message.channel.send(attachment);
+message.channel.send(attachment)
 ```
 
 <img src="https://i.imgur.com/5L7qCkW.png" height="250"></img>
