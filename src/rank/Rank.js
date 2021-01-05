@@ -116,17 +116,18 @@ module.exports = class RankCard {
   }
 
   setBadge(variable, value) {
-    (
-      variable === 1 && this.badge1 ||
-      variable === 2 && this.badge2 ||
-      variable === 3 && this.badge3 ||
-      variable === 4 && this.badge4 ||
-      variable === 5 && this.badge5 ||
-      variable === 6 && this.badge6 ||
-      variable === 7 && this.badge7 ||
-      variable === 8 && this.badge8 ||
-      variable === 9 && this.badge9
-    ) = value;
+    let number = Number(variable);
+    let badge =
+      number === 1 && 'badge1' ||
+      number === 2 && 'badge2' ||
+      number === 3 && 'badge3' ||
+      number === 4 && 'badge4' ||
+      number === 5 && 'badge5' ||
+      number === 6 && 'badge6' ||
+      number === 7 && 'badge7' ||
+      number === 8 && 'badge8' ||
+      number === 9 && 'badge9';
+    if(badge) this[badge] = value;
     return this;
   }
 
