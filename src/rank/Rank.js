@@ -116,18 +116,18 @@ module.exports = class RankCard {
   }
 
   setBadge(variable, value) {
-    if (Number(variable) > 0 && Number(variable) < 10) {
-      if (Number(variable) === 1) this.badge1 = value;
-      if (Number(variable) === 2) this.badge2 = value;
-      if (Number(variable) === 3) this.badge3 = value;
-      if (Number(variable) === 4) this.badge4 = value;
-      if (Number(variable) === 5) this.badge5 = value;
-      if (Number(variable) === 6) this.badge6 = value;
-      if (Number(variable) === 7) this.badge7 = value;
-      if (Number(variable) === 8) this.badge8 = value;
-      if (Number(variable) === 9) this.badge9 = value;
-      return this;
-    }
+    (
+      variable === 1 && this.badge1 ||
+      variable === 2 && this.badge2 ||
+      variable === 3 && this.badge3 ||
+      variable === 4 && this.badge4 ||
+      variable === 5 && this.badge5 ||
+      variable === 6 && this.badge6 ||
+      variable === 7 && this.badge7 ||
+      variable === 8 && this.badge8 ||
+      variable === 9 && this.badge9
+    ) = value;
+    return this;
   }
 
   setRadius(value) {
