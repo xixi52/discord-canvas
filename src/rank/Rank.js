@@ -1,6 +1,8 @@
 const Canvas = require("canvas");
 const { formatVariable, applyText } = require("../../utils/functions");
 
+const badges = [1,9]; // min, max
+
 module.exports = class RankCard {
   constructor() {
     this.backgroundImage = `${__dirname}/../../assets/img/1px.png`;
@@ -39,15 +41,7 @@ module.exports = class RankCard {
     this.textLevel = "lvl {level}";
     this.textNeededXp = "{current}/{needed} for next rank";
     this.textReputation = "+{reputation} rep";
-    this.badge1 = null;
-    this.badge2 = null;
-    this.badge3 = null;
-    this.badge4 = null;
-    this.badge5 = null;
-    this.badge6 = null;
-    this.badge7 = null;
-    this.badge8 = null;
-    this.badge9 = null;
+    for(let i = badges[0]; i <= badges[1]; i++) this[`badge${i}`] = null;
   }
 
   setAvatar(value) {
@@ -116,18 +110,12 @@ module.exports = class RankCard {
   }
 
   setBadge(variable, value) {
-    let number = Number(variable);
-    let badge =
-      number === 1 && 'badge1' ||
-      number === 2 && 'badge2' ||
-      number === 3 && 'badge3' ||
-      number === 4 && 'badge4' ||
-      number === 5 && 'badge5' ||
-      number === 6 && 'badge6' ||
-      number === 7 && 'badge7' ||
-      number === 8 && 'badge8' ||
-      number === 9 && 'badge9';
-    if(badge) this[badge] = value;
+    const number = Number(variable);
+    for(let i = badges[0]; i <= badges[1]; i++)
+      if(number === i){
+        this[`badge${number}`] = value;
+        break;
+      }
     return this;
   }
 
@@ -228,12 +216,12 @@ module.exports = class RankCard {
       ctx.globalAlpha = this.opacityBadges;
       ctx.fillRect(240 + 50 + 50, 295, 700, 70);
       ctx.fillStyle = this.colorNoBadges;
-      const badges = [
+      const badgeNames = [
         'bubble',   'speaker',  'stream',
         'picture',  'like',     'star',
         'boost',    'money',    'bot'
       ];
-      for(let index = 0; index < badges.length; index++){
+      for(let index = 0; index < badgeNames.length; index++){
         let badge = `badge${index+1}`
         if (!this[badge]){
           ctx.globalAlpha = this.opacityNoBadges;
@@ -244,7 +232,7 @@ module.exports = class RankCard {
           ctx.globalAlpha = 1;
           let badgeImg = await Canvas.loadImage(
             ['bronze','silver','gold','diamond'].includes(this[badge].toLowerCase()) ?
-            `${__dirname}/../../assets/img/rank/${badges[index]}_${this[badge].toLowerCase()}.png` :
+            `${__dirname}/../../assets/img/rank/${badgeNames[index]}_${this[badge].toLowerCase()}.png` :
             this[badge]
           );
           ctx.drawImage(badgeImg, 75 * index + 365, 305, 50, 50);
