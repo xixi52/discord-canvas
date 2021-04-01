@@ -4,7 +4,7 @@ module.exports = class Goodbye extends Greeting {
     constructor() {
         super();
         this.textTitle = "GOODBYE";
-        this.textMessage = "Leaving {server}";
+        this.textMessage = "Has Left {server}";
         this.colorTitle = "#df0909";
     }
 };
