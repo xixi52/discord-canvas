@@ -14,7 +14,7 @@ You want to develop a discord bot using the Discord.js library and you want to i
 $ npm install --save discord-canvas
 ```
 
-## [Click here to see the documentation!](https://www.discord-canvas.net)
+## [Click here to see the documentation!](https://www.discord-canvas.com)
 
 ## Example GoodBye
 
