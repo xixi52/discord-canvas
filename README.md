@@ -14,7 +14,7 @@ You want to develop a discord bot using the Discord.js library and you want to i
 $ npm install --save discord-canvas
 ```
 
-## [Click here to see the documentation!](https://www.discord-canvas.net)
+## [Click here to see the documentation!](https://www.discord-canvas.com)
 
 ## Example GoodBye
 
@@ -43,6 +43,34 @@ message.channel.send(attachment);
 ```
 
 <img src="https://i.imgur.com/gh6Yp00.png" height="250"></img>
+
+## Example RankCard
+
+```js
+const Canvas = require("discord-canvas"),
+Discord = require("discord.js");
+
+let image = await new canvas.RankCard()
+.setAddon("xp", false)
+.setAddon("rank", false)
+.setAvatar(message.author.avatarURL)
+.setLevel(7)
+.setReputation(450)
+.setRankName("professional")
+.setUsername("xixi52")
+.setBadge(1, "gold")
+.setBadge(3, "diamond")
+.setBadge(5, "silver")
+.setBadge(6, "bronze")
+.setBackground("https://www.site.com/background.jpg")
+.toAttachment();
+
+let attachment = new MessageAttachment(image.toBuffer(), "rank-card.png");
+
+message.channel.send(attachment)
+```
+
+<img src="https://i.imgur.com/5L7qCkW.png" height="250"></img>
 
 ## Example Fortnite Shop
 

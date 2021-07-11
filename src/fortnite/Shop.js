@@ -5,7 +5,7 @@ const Canvas = require("canvas"),
 const {
   formatVariable,
   applyText,
-} = require(`${__dirname}/../../utils/functions`);
+} = require("../../utils/functions");
 
 module.exports = class FortniteShop {
   constructor() {

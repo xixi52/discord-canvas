@@ -1,9 +1,9 @@
 const Canvas = require("canvas");
-const { formatVariable, applyText } = require(`${__dirname}/../../utils/functions`);
+const { formatVariable, applyText } = require("../../utils/functions");
 
 module.exports = class Greeting {
 
-    constructor(){
+    constructor() {
         this.username = "Clyde";
         this.guildName = "ServerName";
         this.colorTitleBorder = "#000000";
@@ -23,6 +23,7 @@ module.exports = class Greeting {
         this.colorDiscriminatorBox = "#000000";
         this.colorMessage = "#ffffff";
         this.colorHashtag = "#ffffff";
+        this.colorBackground = "000000";
     }
 
     setAvatar(value) {
