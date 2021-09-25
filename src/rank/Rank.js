@@ -46,67 +46,67 @@ module.exports = class RankCard {
 
   setAvatar(value) {
     this.avatar = value;
-    return this;
+    return;
   }
 
   setUsername(value) {
     this.username = value;
-    return this;
+    return;
   }
 
   setRank(value) {
     this.rank = value;
-    return this;
+    return;
   }
 
   setLevel(value) {
     this.level = value;
-    return this;
+    return;
   }
 
   setReputation(value) {
     this.reputation = value;
-    return this;
+    return;
   }
 
   setRankName(value) {
     this.rankName = value;
-    return this;
+    return;
   }
 
   setBackground(value) {
     this.backgroundImage = value;
-    return this;
+    return;
   }
 
   setXP(variable, value) {
     const formattedVariable = formatVariable("xp", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
-    return this;
+    return;
   }
 
   setColor(variable, value) {
     const formattedVariable = formatVariable("color", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
-    return this;
+    return;
   }
 
   setText(variable, value) {
     const formattedVariable = formatVariable("text", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
-    return this;
+    return;
   }
 
   setOpacity(variable, value) {
     const formattedVariable = formatVariable("opacity", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
-    return this;
+    return;
   }
 
   setAddon(variable, value) {
     const formattedVariable = formatVariable("addon", variable);
     if (this[formattedVariable]) this[formattedVariable] = value;
-    return this;
+    return;
   }
 
   setBadge(variable, value) {
@@ -116,12 +116,12 @@ module.exports = class RankCard {
         this[`badge${number}`] = value;
         break;
       }
-    return this;
+    return;
   }
 
   setRadius(value) {
     this.radiusCorner = value;
-    return this;
+    return;
   }
 
   async toAttachment() {
