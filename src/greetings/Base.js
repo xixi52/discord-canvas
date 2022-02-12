@@ -79,6 +79,36 @@ module.exports = class Greeting {
         const canvas = Canvas.createCanvas(1024, 450);
         const ctx = canvas.getContext("2d");
 
+        Canvas.CanvasRenderingContext2D.prototype.roundRect = function (x, y, width, height, radius, fill, stroke) {
+            var cornerRadius = { upperLeft: 0, upperRight: 0, lowerLeft: 0, lowerRight: 0 };
+            if (typeof stroke == "undefined") {
+                stroke = true;
+            }
+            if (typeof radius === "object") {
+                for (var side in radius) {
+                    cornerRadius[side] = radius[side];
+                }
+            }
+        
+            this.beginPath();
+            this.moveTo(x + cornerRadius.upperLeft, y);
+            this.lineTo(x + width - cornerRadius.upperRight, y);
+            this.quadraticCurveTo(x + width, y, x + width, y + cornerRadius.upperRight);
+            this.lineTo(x + width, y + height - cornerRadius.lowerRight);
+            this.quadraticCurveTo(x + width, y + height, x + width - cornerRadius.lowerRight, y + height);
+            this.lineTo(x + cornerRadius.lowerLeft, y + height);
+            this.quadraticCurveTo(x, y + height, x, y + height - cornerRadius.lowerLeft);
+            this.lineTo(x, y + cornerRadius.upperLeft);
+            this.quadraticCurveTo(x, y, x + cornerRadius.upperLeft, y);
+            this.closePath();
+            if (stroke) {
+                this.stroke();
+            }
+            if (fill) {
+                this.fill();
+            }
+        }
+
         const guildName = this.textMessage.replace(/{server}/g, this.guildName);
         const memberCount = this.textMemberCount.replace(/{count}/g, this.memberCount);
 
@@ -97,47 +127,56 @@ module.exports = class Greeting {
         ctx.fillRect(25, canvas.height - 25, canvas.width - 50, 25);
         ctx.fillStyle = this.colorUsernameBox;
         ctx.globalAlpha = this.opacityUsernameBox;
-        ctx.fillRect(344, canvas.height - 296, 625, 65);
+        ctx.fillRect(344, canvas.height - 296 + 35, 625, 65);
         ctx.fillStyle = this.colorDiscriminatorBox;
         ctx.globalAlpha = this.opacityDiscriminatorBox;
-        ctx.fillRect(389, canvas.height - 225, 138, 65);
+        ctx.fillRect(389, canvas.height - 225 + 35, 158, 65);
         ctx.fillStyle = this.colorMessageBox;
         ctx.globalAlpha = this.opacityMessageBox;
-        ctx.fillRect(308, canvas.height - 110, 672, 65);
+        //ctx.fillRect(308, canvas.height - 110, 672, 65);
+        ctx.fillRect(308, canvas.height - 370, 672, 65);
+
+        ctx.fillStyle = this.colorMessageBox;
+        ctx.globalAlpha = this.opacityMessageBox;
+        //ctx.fillRect(308, canvas.height - 110, 672, 65);
+        ctx.roundRect(
+            35 + 135,
+            canvas.height - 60,
+            
+            680 + 70 - (125 - 70),
+            30,
+            
+            { upperLeft: 15, upperRight: 15, lowerLeft: 15, lowerRight: 15 },
+
+            true,
+            true
+        );
 
         // Draw username
         ctx.globalAlpha = 1;
         ctx.fillStyle = this.colorUsername;
         ctx.font = applyText(canvas, this.username, 48, 600, "Bold");
-        ctx.fillText(this.username, canvas.width - 660, canvas.height - 248);
+        ctx.fillText(this.username, canvas.width - 660, canvas.height - 248 + 35);
 
         // Draw guild name
         ctx.fillStyle = this.colorMessage;
         ctx.font = applyText(canvas, guildName, 53, 600, "Bold");
-        ctx.fillText(guildName, canvas.width - 690, canvas.height - 62);
+        ctx.fillText(guildName, canvas.width - 690, canvas.height - 320);
 
         // Draw discriminator
         ctx.fillStyle = this.colorDiscriminator;
         ctx.font = "40px Bold";
-        ctx.fillText(this.discriminator, canvas.width - 623, canvas.height - 178);
+        ctx.fillText(this.discriminator, canvas.width - 623, canvas.height - 178 + 35);
 
         // Draw membercount
         ctx.fillStyle = this.colorMemberCount;
         ctx.font = "22px Bold";
-        ctx.fillText(memberCount, 40, canvas.height - 35);
+        ctx.fillText(memberCount, 40 + 145, canvas.height - 35);
 
         // Draw # for discriminator
         ctx.fillStyle = this.colorHashtag;
         ctx.font = "75px SketchMatch";
-        ctx.fillText("#", canvas.width - 690, canvas.height - 165);
-
-        // Draw title
-        ctx.font = "90px Bold";
-        ctx.strokeStyle = this.colorTitleBorder;
-        ctx.lineWidth = 15;
-        ctx.strokeText(this.textTitle, canvas.width - 620, canvas.height - 330);
-        ctx.fillStyle = this.colorTitle;
-        ctx.fillText(this.textTitle, canvas.width - 620, canvas.height - 330);
+        ctx.fillText("#", canvas.width - 690, canvas.height - 165 + 35);
 
         // Draw avatar circle
         ctx.beginPath();
