@@ -3,6 +3,7 @@
 [![downloadsBadge](https://img.shields.io/npm/dt/discord-canvas?style=for-the-badge)](https://npmjs.com/discord-canvas)
 [![versionBadge](https://img.shields.io/npm/v/discord-canvas?style=for-the-badge)](https://npmjs.com/discord-canvas)
 [![doc](https://img.shields.io/badge/Documentation-Click%20here-blue?style=for-the-badge)](https://www.discord-canvas.net)
+[![CodeFactor](https://www.codefactor.io/repository/github/xixi52/discord-canvas/badge)](https://www.codefactor.io/repository/github/xixi52/discord-canvas)
 
 ## Easy to use !!
 
