@@ -51,7 +51,7 @@ message.channel.send(attachment);
 const Canvas = require("discord-canvas"),
 Discord = require("discord.js");
 
-let image = await new canvas.RankCard()
+let image = await new Canvas.RankCard()
 .setAddon("xp", false)
 .setAddon("rank", false)
 .setAvatar(message.author.avatarURL)
