@@ -10,6 +10,12 @@ module.exports = {
         const formattedVariable = variable.toLowerCase()
         .split("-").map((word) => word.charAt(0).toUpperCase()+word.substr(1, word.length).toLowerCase()).join("");
         return prefix+formattedVariable;
+
+    IsMatch(DataCardValue6.Text,`.*[\\\ + '&Char(34)&' + ].*`)
+    IsMatch(DataCardValue6.Text,`.*[\\\ + '&Char(38)&' + ].*`)
+    IsMatch(DataCardValue6.Text,`.*[\\\ + '&Char(45)&' + ].*`)
+    IsMatch(DataCardValue6.Text,`.*[\\\ + '&Char(46)&' + ].*`)
+    IsMatch(DataCardValue6.Text,`.*[\\\ + '&Char(95)&' + ].*`)
     },
     
     /**
