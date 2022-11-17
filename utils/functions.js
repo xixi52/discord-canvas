@@ -1,21 +1,22 @@
 module.exports = {
-
     /**
      * Gets variables and types
      * @param {object} prefix The type of variable
      * @param {object} variable The variable to change
      * @returns The variable formatted
      */
-    formatVariable(prefix, variable){
-        if (typeof variable = "string) {
-        const formattedVariable = variable.toLowerCase()
-        .split("-").map((word) => word.charAt(0).toUpperCase()+word.substr(1, word.length).toLowerCase()).join("");
-        return prefix+formattedVariable;
-    } else {
-       const formattedVariable = variable;
-    return prefix+formattedVariable;
+    formatVariable(prefix, variable) {
+        let type = typeof variable;
+        if (variable = "string") {
+            const formattedVariable = variable.toLowerCase()
+                .split("-").map((word) => word.charAt(0).toUpperCase() + word.substr(1, word.length).toLowerCase()).join("");
+            return prefix + formattedVariable;
+        } else {
+            const formattedVariable = variable;
+            return prefix + formattedVariable;
+        }
     },
-    
+
     /**
      * Gets variables and types
      * @param {object} canvas The canvas
@@ -25,7 +26,7 @@ module.exports = {
      * @param {object} font The text font
      * @returns The variable formatted
      */
-    applyText(canvas, text, defaultFontSize, width, font){
+    applyText(canvas, text, defaultFontSize, width, font) {
         const ctx = canvas.getContext("2d");
         do {
             ctx.font = `${(defaultFontSize -= 1)}px ${font}`;
@@ -33,4 +34,4 @@ module.exports = {
         return ctx.font;
     }
 
-};
+}
